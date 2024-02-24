@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+* {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+#logo h1, #project-space > h1 {
+    font-family: "IM Fell English SC", sans-serif;
+}
+
+#popup-window-active {
+    display: none;
+    position: fixed;
+    background-color: white;
+    height: 550px;
+    width: 450px;
+    z-index: 1;
+}
+
+#profile-picture {
+    border-radius: 50%;
+    width: 50px;
+}
+
+#task-container {
+    padding: 10px;
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-container > div {
+    padding: 10px;
+    height: 33vh;
+    border-radius: 5px
+}
+
+#task-container h1 {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 28px;
+}
+
+#header {
+    padding: 10px;
+    margin-left: 200px;
+}
+
+#working-space {
+    padding: 20px 20px;
+    margin-left: 200px;
+}
+
+#task-bar {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 35px;
+    right: 0;
+}
+
+#task-container > div {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    height: calc(33% - 10px);
+    width: 100%;
+    background-color: #DCDCDC;
+}
+
+#header {
+    background-image: linear-gradient(to top right, #5174FF, #74B9FF, #74F0FF);
+    border-bottom: 5px solid black;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#project-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+#create-project {
+    background-color: transparent;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 150px;
+    width: 150px;
+    border: 2px dashed grey;
+    transition: transform 0.15s ease-in-out;
+}
+
+#create-project:hover {
+    cursor: pointer;
+    transform: scale(1.05, 1.05);
+}
+
+#active-projects {
+    margin: 10px 0;
+    padding: 20px;
+    background-color: lightgrey;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
