@@ -15,9 +15,6 @@ With the speed of a flying pterodactyl, tasks are swiftly captured, organized, a
 ### Maximize Clan Productivity
 Empower your tribe with Rabid Tasker and Google Database (Firebase). Together, they unleash the primal power of task management, ensuring your clan thrives in the harsh landscape of productivity.
 
-## Installation
-
-To get started with Rabid Tasker, simply clone this repository and follow the installation instructions in the accompanying documentation.
 
 ## Usage
 
