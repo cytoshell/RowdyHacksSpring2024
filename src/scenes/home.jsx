@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, db } from '../firebase';
 import { collection, query, where, getDocs, updateDoc, doc, addDoc, deleteDoc } from 'firebase/firestore';
-import { FormCheck, Button, Spinner, Alert, Form } from 'react-bootstrap'; // Import Bootstrap components
+import { FormCheck, Button, Spinner, Alert, Form } from 'react-bootstrap'; 
 
 const Home = () => {
     const [user] = useAuthState(auth);
@@ -102,6 +102,12 @@ const Home = () => {
         }
     };
 
+    const sortedTasks = [...tasks].sort((a, b) => {
+        if (a.completed && !b.completed) return 1;
+        if (!a.completed && b.completed) return -1;
+        return 0;
+    });
+
     return (
         <section className="home" id="home">
             <h1 style={{ color: '#F05A22', marginBottom: '20px', fontFamily: 'Fira Sans' }}>
@@ -110,8 +116,6 @@ const Home = () => {
                     Please log in to view your tasks
                 </>}
             </h1>
-            {loading && <Spinner animation="border" role="status" />}
-            {error && <Alert variant="danger">{error}</Alert>}
             {user && (
                 <Button variant="primary" onClick={() => setShowNewTaskInput(true)} style={{ marginBottom: '10px' }}>
                     New Task
@@ -126,11 +130,15 @@ const Home = () => {
                         onChange={(e) => setNewTaskContent(e.target.value)}
                         style={{ flex: '1', fontFamily: 'Fira Sans' }}
                     />
-                    <Button variant="success" onClick={handleNewTaskSubmit} style={{ marginLeft: '10px' }}>Submit</Button>
+                    <Button variant="success" onClick={handleNewTaskSubmit} style={{ marginLeft: '10px' }}>
+                        Submit
+                    </Button>
                 </div>
             )}
+            {loading && <Spinner animation="border" role="status" />}
+            {error && <Alert variant="danger">{error}</Alert>}
             <ul style={{ listStyleType: 'none' }}>
-                {tasks.map(task => (
+                {sortedTasks.map(task => (
                     <li key={task.id} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
                         <FormCheck
                             type="checkbox"
@@ -147,20 +155,30 @@ const Home = () => {
                                 style={{ flex: '1', fontFamily: 'Fira Sans' }}
                             />
                         ) : (
-                            <h3 className="taskContent" style={{ flex: '1', color: '#F05A22', fontFamily: 'Fira Sans', marginBottom: '0' }}>{task.content}</h3>
+                            <h3 className="taskContent" style={{ flex: '1', color: '#F05A22', fontFamily: 'Fira Sans', marginBottom: '0' }}>
+                                {task.content}
+                            </h3>
                         )}
                         {editingTaskId === task.id ? (
                             <>
-                                <Button variant="success" onClick={handleSubmitEdit} style={{ marginLeft: '10px' }}>Submit</Button>
-                                <Button variant="danger" onClick={handleCancelEdit} style={{ marginLeft: '10px' }}>Cancel</Button>
+                                <Button variant="success" onClick={handleSubmitEdit} style={{ marginLeft: '10px' }}>
+                                    Submit
+                                </Button>
+                                <Button variant="danger" onClick={handleCancelEdit} style={{ marginLeft: '10px' }}>
+                                    Cancel
+                                </Button>
                             </>
                         ) : (
                             <>
-                                <Button variant="info" onClick={() => handleEditTask(task.id, task.content)} style={{ marginLeft: '10px' }}>Edit</Button>
-                                <Button variant="danger" onClick={() => handleDeleteTask(task.id)} style={{ marginLeft: '10px' }}>Delete</Button>
+                                <Button variant="info" onClick={() => handleEditTask(task.id, task.content)} style={{ marginLeft: '10px' }}>
+                                    Edit
+                                </Button>
+                                <Button variant="danger" onClick={() => handleDeleteTask(task.id)} style={{ marginLeft: '10px' }}>
+                                    Delete
+                                </Button>
                             </>
                         )}
-                    </li>
+                        </li>
                 ))}
             </ul>
         </section>
