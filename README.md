@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Welcome to Rabid Tasker, a ✨revolutionary✨ task management tool that brings ancient task management into the future. Powered by the mystical Google Firebase with its hosting and Firestore databse, Rabid Tasker ensures swift and efficient task organization for your tribe.
+Welcome to Rabid Tasker, a ✨revolutionary✨ task management tool that brings ancient task management into the future. Powered by the mystical Google Firebase with its hosting and Firestore database, Rabid Tasker ensures swift and efficient task organization for your tribe.
 
 <img src="https://i.ibb.co/hfqFkVF/todo-logo.png" heigh=750 width=1000>
 
