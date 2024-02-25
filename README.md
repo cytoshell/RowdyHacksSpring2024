@@ -56,7 +56,7 @@ Your app is ready to be deployed!
 - Nicolas Ruiz
 - Michael DeWitt
 - Hoang Tran
-- Shawn 
+- Shawn Tapp
 
 ## License
 
