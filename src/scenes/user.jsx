@@ -6,9 +6,9 @@ const H1style = {
 
 const user = () => {
     return (
-        <div>
+        <section class="user" id='user'>
             <h1 style={H1style}>Welcome to the user page</h1>
-        </div>
+        </section>
     )
 }
 

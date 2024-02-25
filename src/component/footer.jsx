@@ -6,20 +6,17 @@ import {
 
 const Footer = () => {
     return (
-        <Container>
-            <Row>
-                <hr style={{ color: 'white' }} />
-                <Col className="text-center py-3" style={{ color: 'white' }}>
-                    &copy;{new Date().getFullYear()} Rabid Tasker | Check out our <a
+        <footer class="footer">
+            <div class="footer-text">
+                <a>&copy;{new Date().getFullYear()} Rabid Tasker | Check out our <a
                         style={{ color: 'white' }}
                         href="https://github.com/cytoshell/rabid-tasker"
                         target="_blank"
                         rel="noopener">
                         Github
-                    </a>
-                </Col>
-            </Row>
-        </Container>
+                    </a></a>
+            </div>
+        </footer>
     )
 }
 

@@ -20,7 +20,8 @@ export default function NavBar({ Link }) {
     }
 
 
-    return (<Navbar bg="dark" expand="lg" variant='dark' sticky="top">
+    return (
+        <Navbar bg="dark" expand="lg" variant='dark' sticky="top">
         <Container fluid>
             <Navbar.Brand as={Link} to="/Home">
                 <img
@@ -70,5 +71,6 @@ export default function NavBar({ Link }) {
                 </Form>
             </Navbar.Collapse>
         </Container>
-    </Navbar>);
+        </Navbar>
+    );
 }

@@ -6,9 +6,9 @@ const H1style = {
 
 const contact = () => {
     return (
-        <div>
+        <section class="contact" id='contact'>
             <h1 style={H1style}>Welcome to the contact page</h1>
-        </div>
+        </section>
     )
 }
 

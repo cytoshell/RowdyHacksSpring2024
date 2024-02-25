@@ -6,9 +6,9 @@ const H1style = {
 
 const features = () => {
     return (
-        <div>
+        <section class="features" id='features'>
             <h1 style={H1style}>Welcome to the features page</h1>
-        </div>
+        </section>
     )
 }
 

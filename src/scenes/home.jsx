@@ -6,9 +6,9 @@ const H1style = {
 
 const Home = () => {
     return (
-        <div>
+        <section class="home" id='home'>
             <h1 style={H1style}>Welcome to the home page</h1>
-        </div>
+        </section>
     )
 }
 

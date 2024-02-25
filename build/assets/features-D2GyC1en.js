@@ -1,0 +1,1 @@
+import{j as e}from"./index-k_BWehiM.js";const s={color:"#F05A22"},r=()=>e.jsx("section",{class:"features",id:"features",children:e.jsx("h1",{style:s,children:"Welcome to the features page"})});export{r as default};
