@@ -1,1 +1,0 @@
-import{j as e}from"./index-k_BWehiM.js";const s={color:"#F05A22"},t=()=>e.jsx("section",{class:"user",id:"user",children:e.jsx("h1",{style:s,children:"Welcome to the user page"})});export{t as default};

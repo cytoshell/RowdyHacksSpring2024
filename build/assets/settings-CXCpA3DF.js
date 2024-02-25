@@ -1,0 +1,1 @@
+import{j as s}from"./index-BaEKWsJa.js";const t={color:"#F05A22"},n=()=>s.jsx("section",{class:"settings",id:"settings",children:s.jsx("h1",{style:t,children:"Welcome to the settings page"})});export{n as default};

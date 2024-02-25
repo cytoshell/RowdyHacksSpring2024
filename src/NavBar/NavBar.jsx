@@ -2,7 +2,7 @@ import { logout, signInWithGoogle } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../firebase';
 import { Navigate } from 'react-router-dom'
-import logo from '../assets/react.svg'
+import logo from '../assets/images/RT_Logo.png';
 import {
     Container,
     Button,
@@ -22,55 +22,60 @@ export default function NavBar({ Link }) {
 
     return (
         <Navbar bg="dark" expand="lg" variant='dark' sticky="top">
-        <Container fluid>
-            <Navbar.Brand as={Link} to="/Home">
-                <img
-                    src={logo}
-                    className="d-inline-block align-top"
-                    alt="React Bootstrap logo"
-                />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
-                <Nav className="me-auto my-2 my-lg-0" style={{
-                    maxHeight: '100px'
-                }} navbarScroll>
-                    <Nav.Link as={Link} to="/contact" >
-                        Contact
-                    </Nav.Link>
-                    <Nav.Link as={Link} to="/features" >
-                        Features
-                    </Nav.Link>
-                    <Nav.Link as={Link} to="/user" >
-                        User
-                    </Nav.Link>
-                </Nav>
-                <Form className="d-flex">
-                    {!user ? (
-                        <Button
-                            variant="outline-primary"
-                            onClick={signInWithGoogle}
-                        >
-                            Log in
-                        </Button>
-                    ) : (
-                        <>
-                            <Link to="/Home">
-                                <Button
-                                    variant="outline-danger"
-                                    onClick={() => {
-                                        sendEmHome()
-                                        logout()
-                                    }}
-                                >
-                                    Log out
-                                </Button>
-                            </Link>
-                        </>
-                    )}
-                </Form>
-            </Navbar.Collapse>
-        </Container>
+            <Container fluid>
+                <Navbar.Brand as={Link} to="/Home">
+                    <img
+                        src={logo}
+                        className="d-inline-block align-top"
+                        alt="React Bootstrap logo"
+                        class='logo'
+                        id='logo'
+                    />
+                </Navbar.Brand>
+                <Navbar.Brand as={Link} to="/Home">
+                    <h1 class="title" id="title">Rabid Tasker</h1>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav className="me-auto my-2 my-lg-0" style={{
+                        maxHeight: '100px'
+                    }} navbarScroll>
+                        <Nav.Link as={Link} to="/features" >
+                            Features
+                        </Nav.Link>
+                        <Nav.Link as={Link} to="/contact" >
+                            Contact
+                        </Nav.Link>
+                        <Nav.Link as={Link} to="/settings" >
+                            Settings
+                        </Nav.Link>
+                    </Nav>
+                    <Form className="d-flex">
+                        {!user ? (
+                            <Button
+                                variant="outline-primary"
+                                onClick={signInWithGoogle}
+                            >
+                                Log in
+                            </Button>
+                        ) : (
+                            <>
+                                <Link to="/Home">
+                                    <Button
+                                        variant="outline-danger"
+                                        onClick={() => {
+                                            sendEmHome()
+                                            logout()
+                                        }}
+                                    >
+                                        Log out
+                                    </Button>
+                                </Link>
+                            </>
+                        )}
+                    </Form>
+                </Navbar.Collapse>
+            </Container>
         </Navbar>
     );
 }

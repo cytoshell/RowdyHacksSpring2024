@@ -10,7 +10,7 @@ import LoadingSpinner from './LoadingSpinner/LoadingSpinner';
 const Home = lazy(() => import('./scenes/home'))
 const Features = lazy(() => import('./scenes/features'))
 const Contact = lazy(() => import('./scenes/contact'))
-const User = lazy(() => import('./scenes/user'))
+const Settings = lazy(() => import('./scenes/settings'))
 
 function App() {
 
@@ -24,7 +24,7 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/features" element={<Features />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/user" element={<User />} />
+              <Route path="/settings" element={<Settings />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
           </Suspense>
