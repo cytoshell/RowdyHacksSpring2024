@@ -5,7 +5,7 @@ const NotFound = () => {
     return (
         <div id="main">
             <div className="fof">
-                <h1>Error 404</h1>
+                <h1>Error 404: Not Found</h1>
             </div>
         </div>
     )
