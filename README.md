@@ -1,8 +1,11 @@
-# [<img src="https://i.ibb.co/PwM7cc2/RT-logo.png" heigh=75 width=75>](https://rabid-tasker.web.app/) RABID TASKER - THE MANUAL
+# [<img src="https://i.ibb.co/PwM7cc2/RT-logo.png" heigh=75 width=75>](https://rabid-tasker.web.app/) [RABID TASKER](https://rabid-tasker.web.app/Home) - THE MANUAL -
+
 
 ## Introduction
 
-Welcome to Rabid Tasker, a revolutionary task management tool that brings ancient task management into the future. Powered by the mystical Google Database (Firebase), Rabid Tasker ensures swift and efficient task organization for your tribe.
+Welcome to Rabid Tasker, a ✨revolutionary✨ task management tool that brings ancient task management into the future. Powered by the mystical Google Firebase with its hosting and Firestore databse, Rabid Tasker ensures swift and efficient task organization for your tribe.
+
+<img src="https://i.ibb.co/hfqFkVF/todo-logo.png" heigh=750 width=1000>
 
 ## Features
 
@@ -18,11 +21,13 @@ Empower your tribe with Rabid Tasker and Google Database (Firebase). Together, t
 
 ## Usage
 
-Once installed, Rabid Tasker can be accessed through any modern web browser. Simply log in with your tribe's credentials and start organizing tasks with ease.
+Once login, Rabid Tasker can be accessed through any modern web browser. You can either click into the link above or copy and paste this link into your browser: [https://rabid-tasker.web.app/Home](https://rabid-tasker.web.app/Home). Simply log in with your Google's account and start organizing tasks with ease.
+
 
 ## License
 
 Rabid Tasker is licensed under the BSD 3-Clause License. See the LICENSE file for more details.
+
 
 ## React + Vite
 
