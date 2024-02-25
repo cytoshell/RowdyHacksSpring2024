@@ -6,7 +6,7 @@ const H1style = {
 
 const settings = () => {
     return (
-        <section class="settings" id='settings'>
+        <section className="settings" id='settings'>
             <h1 style={H1style}>Welcome to the settings page</h1>
         </section>
     )

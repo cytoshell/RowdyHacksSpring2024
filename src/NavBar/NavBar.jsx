@@ -23,17 +23,15 @@ export default function NavBar({ Link }) {
     return (
         <Navbar bg="dark" expand="lg" variant='dark' sticky="top">
             <Container fluid>
-                <Navbar.Brand as={Link} to="/Home">
+                <Navbar.Brand as={Link} to="/Home" className="logo" id="logo">
                     <img
                         src={logo}
                         className="d-inline-block align-top"
                         alt="React Bootstrap logo"
-                        class='logo'
-                        id='logo'
                     />
                 </Navbar.Brand>
                 <Navbar.Brand as={Link} to="/Home">
-                    <h1 class="title" id="title">Rabid Tasker</h1>
+                    <h1 className="title" id="title">Rabid Tasker</h1>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">

@@ -1,1 +1,0 @@
-import{j as t}from"./index-BaEKWsJa.js";const c={color:"#F05A22"},e=()=>t.jsx("section",{class:"contact",id:"contact",children:t.jsx("h1",{style:c,children:"Welcome to the contact page"})});export{e as default};

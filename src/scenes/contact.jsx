@@ -6,7 +6,7 @@ const H1style = {
 
 const contact = () => {
     return (
-        <section class="contact" id='contact'>
+        <section className="contact" id='contact'>
             <h1 style={H1style}>Welcome to the contact page</h1>
         </section>
     )
