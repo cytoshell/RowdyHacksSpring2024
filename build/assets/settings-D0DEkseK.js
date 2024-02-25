@@ -1,1 +1,0 @@
-import{j as s}from"./index-BmVCCMrq.js";const t={color:"#F05A22"},n=()=>s.jsx("section",{className:"settings",id:"settings",children:s.jsx("h1",{style:t,children:"Welcome to the settings page"})});export{n as default};
