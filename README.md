@@ -1,4 +1,4 @@
-# [RABID TASKERS](https://rabid-tasker.web.app/)  - THE MANUAL
+# [<img src="https://i.ibb.co/PwM7cc2/RT-logo.png" heigh=75 width=75>](https://rabid-tasker.web.app/) RABID TASKER - THE MANUAL
 
 ## Introduction
 
